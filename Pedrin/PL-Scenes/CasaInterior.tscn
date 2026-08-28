@@ -1,9 +1,10 @@
 [gd_scene format=4 uid="uid://gq1cwwmtcjjy"]
 
 [ext_resource type="PackedScene" uid="uid://dvru7yfrsbi5k" path="res://Pedrin/PL-Scenes/PlayerTD.tscn" id="1_27ki4"]
-[ext_resource type="Script" uid="uid://i2j76ed3nk8v" path="res://Pedrin/PL-Scenes/casa_interior.gd" id="1_qgsf3"]
+[ext_resource type="Script" uid="uid://i2j76ed3nk8v" path="res://Pedrin/PL-Scripts/casa_interior.gd" id="1_qgsf3"]
 [ext_resource type="Texture2D" uid="uid://dbr3jkc65kr01" path="res://Pedrin/PL-Sprites/House.png" id="2_cht8j"]
 [ext_resource type="Script" uid="uid://dasjj4uyhkqxl" path="res://Pedrin/PL-Scripts/entrar_casa.gd" id="3_iysvh"]
+[ext_resource type="PackedScene" uid="uid://5cxhsrj8ia5h" path="res://Pedrin/PL-Scenes/UI_Relogio.tscn" id="5_y5qpv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iysvh"]
 texture = ExtResource("2_cht8j")
@@ -108,7 +109,12 @@ shape = SubResource("RectangleShape2D_cht8j")
 [node name="SpawnPorta" type="Marker2D" parent="." unique_id=1986233820]
 position = Vector2(0, 9)
 
+[node name="SpawnCama" type="Marker2D" parent="." unique_id=456927804]
+position = Vector2(50, -32)
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1669517538]
 zoom = Vector2(4.86, 4.86)
+
+[node name="UiRelogio" parent="." unique_id=647822281 instance=ExtResource("5_y5qpv")]
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
