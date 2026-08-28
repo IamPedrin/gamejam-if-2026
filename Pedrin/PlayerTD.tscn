@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dvru7yfrsbi5k"]
+
+[ext_resource type="Script" uid="uid://10rya2oe73xp" path="res://Pedrin/PlayerMovement.gd" id="1_x4jts"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8jdce"]
+
+[node name="PlayerTd" type="Node2D" unique_id=958454402]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1083472064]
+zoom = Vector2(2.795, 2.795)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=152577314]
+script = ExtResource("1_x4jts")
+max_speed = 150.0
+acceleration = 300.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1185140004]
+position = Vector2(0, -10)
+shape = SubResource("RectangleShape2D_8jdce")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=938931293]
