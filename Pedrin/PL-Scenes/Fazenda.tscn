@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://t4xkoeihnp3h" path="res://Pedrin/PL-Sprites/Fence's copiar.png" id="3_3001q"]
 [ext_resource type="Script" uid="uid://dasjj4uyhkqxl" path="res://Pedrin/PL-Scripts/entrar_casa.gd" id="3_lixew_script"]
 [ext_resource type="PackedScene" uid="uid://dvru7yfrsbi5k" path="res://Pedrin/PL-Scenes/PlayerTD.tscn" id="4_a6tru"]
-[ext_resource type="PackedScene" uid="uid://gq1cwwmtcjjy" path="res://Pedrin/PL-Scenes/Teste.tscn" id="6_8ciov"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3001q"]
 texture = ExtResource("1_a6tru")
@@ -402,8 +401,8 @@ zoom = Vector2(3.395, 3.395)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=461721011]
 script = ExtResource("3_lixew_script")
-cena_casa = ExtResource("6_8ciov")
-spawn_destino = "SaidaPorta"
+cena_caminho = "uid://gq1cwwmtcjjy"
+spawn_destino = "SpawnPorta"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=257546624]
 position = Vector2(4, -19)
@@ -413,9 +412,9 @@ shape = SubResource("RectangleShape2D_d2kgv")
 position = Vector2(-40, 41)
 
 [node name="SaidaPorta" type="Marker2D" parent="." unique_id=1406347000]
-position = Vector2(4, 1)
+position = Vector2(4, 10)
 
 [node name="PlayerTd" parent="." unique_id=958454402 instance=ExtResource("4_a6tru")]
-position = Vector2(4, 1)
+position = Vector2(-44, 24)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
