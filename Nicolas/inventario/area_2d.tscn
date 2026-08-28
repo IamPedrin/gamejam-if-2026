@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dq6pnypc5pwy0"]
+
+[ext_resource type="Script" uid="uid://c5ff7tybfoi5e" path="res://Nicolas/inventario/gerenciar.gd" id="1_ev0jm"]
+[ext_resource type="Texture2D" uid="uid://bub71utsrcd75" path="res://Nicolas/IMAGENS/mochila.png" id="2_v1o1l"]
+[ext_resource type="Texture2D" uid="uid://jlm0vibj8c7g" path="res://Nicolas/IMAGENS/rpg-inventory-pixel-art-backpack-260nw-2220886781-removebg-preview.png" id="3_ud45u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ve7q"]
+size = Vector2(79, 91)
+
+[node name="Area2D" type="Area2D" unique_id=1831742062]
+script = ExtResource("1_ev0jm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1480974097]
+position = Vector2(151, 125)
+texture = ExtResource("2_v1o1l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=309534016]
+position = Vector2(154, 119)
+shape = SubResource("RectangleShape2D_3ve7q")
+
+[node name="inventario-imagem" type="Sprite2D" parent="." unique_id=1347704026]
+position = Vector2(470, 165)
+scale = Vector2(1.1849562, 1.1849563)
+texture = ExtResource("3_ud45u")

@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://bw857wnropux2"]
+
+[ext_resource type="Script" uid="uid://bn6cbsowxcr58" path="res://Nicolas/control.gd" id="1_62e2m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ve7q"]
+bg_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[node name="Control" type="Control" unique_id=1822950656]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_62e2m")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=594306250]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 3
+
+[node name="Panel" type="Panel" parent="GridContainer" unique_id=772986396]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3ve7q")
+
+[node name="Label" type="Label" parent="GridContainer/Panel" unique_id=1322882355]
+custom_minimum_size = Vector2(45, 42)
+layout_mode = 0
+offset_left = 45.0
+offset_top = 42.0
+offset_right = 90.0
+offset_bottom = 84.0
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel" unique_id=1385974327]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+
+[node name="Panel2" type="Panel" parent="GridContainer" unique_id=2111286984]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3ve7q")
+
+[node name="Label" type="Label" parent="GridContainer/Panel2" unique_id=13716699]
+custom_minimum_size = Vector2(45, 42)
+layout_mode = 0
+offset_left = 45.0
+offset_top = 42.0
+offset_right = 90.0
+offset_bottom = 84.0
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel2" unique_id=820016111]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+rotation = -0.011832781
+expand_mode = 1
+
+[node name="Panel3" type="Panel" parent="GridContainer" unique_id=350314738]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3ve7q")
+
+[node name="Label" type="Label" parent="GridContainer/Panel3" unique_id=567050231]
+custom_minimum_size = Vector2(45, 42)
+layout_mode = 0
+offset_left = 45.0
+offset_top = 42.0
+offset_right = 90.0
+offset_bottom = 84.0
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/Panel3" unique_id=1131355015]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
