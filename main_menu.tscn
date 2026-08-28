@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://crtc4wsehmlrb"]
+
+[ext_resource type="Script" uid="uid://bfl3cyvplu7dt" path="res://main_menu.gd" id="1_06t4h"]
+
+[node name="main menu" type="Control" unique_id=1839881705]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+cena_do_jogo = "uid://crtc4wsehmlrb"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1004836333]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -261.0
+offset_top = -118.0
+offset_right = 19.0
+offset_bottom = 82.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.119, 2.5)
+
+[node name="playbutton" type="Button" parent="VBoxContainer" unique_id=572099173]
+layout_mode = 2
+text = "continuar"
+
+[node name="optionsbutton" type="Button" parent="VBoxContainer" unique_id=933783719]
+layout_mode = 2
+text = "opções"
+
+[node name="quitbutton" type="Button" parent="VBoxContainer" unique_id=683025617]
+layout_mode = 2
+text = "sair"
+
+[connection signal="pressed" from="VBoxContainer/playbutton" to="." method="_on_playbutton_pressed"]
+[connection signal="pressed" from="VBoxContainer/optionsbutton" to="." method="_on_optionsbutton_pressed"]
+[connection signal="pressed" from="VBoxContainer/quitbutton" to="." method="_on_quitbutton_pressed"]
