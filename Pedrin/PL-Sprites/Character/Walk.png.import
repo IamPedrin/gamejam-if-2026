@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bn22mnsxtyda5"
-path="res://.godot/imported/tux.png-a781d6f16ca714c3e590097158ca1b66.ctex"
+uid="uid://dyl843btf544w"
+path="res://.godot/imported/Walk.png-e9970dc7053920a5f2cf6da50bc627e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pedrin/tux.png"
-dest_files=["res://.godot/imported/tux.png-a781d6f16ca714c3e590097158ca1b66.ctex"]
+source_file="res://Pedrin/PL-Sprites/Character/Walk.png"
+dest_files=["res://.godot/imported/Walk.png-e9970dc7053920a5f2cf6da50bc627e4.ctex"]
 
 [params]
 
