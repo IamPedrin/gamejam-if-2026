@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://btet1sbord6gj"]
+
+[ext_resource type="Texture2D" uid="uid://b43orxmypsu1s" path="res://Pedrin/PL-Sprites/Crop_Spritesheet.png" id="1_28x7a"]
+
+[resource]
+atlas = ExtResource("1_28x7a")
+region = Rect2(47.796387, 144.34915, 16, 16)

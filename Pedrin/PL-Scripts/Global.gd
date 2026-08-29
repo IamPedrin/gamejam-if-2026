@@ -40,9 +40,13 @@ func dormir_e_processar_dia(arvore_de_cenas: SceneTree) -> void:
 			# Julga sobrevivência
 			if mem["agua"] == req_agua and mem["fert"] == req_fert:
 				plantas_vivas += 1
+				if not mem.has("dias_vivos"):
+					mem["dias_vivos"] = 0
+				mem["dias_vivos"] += 1 
 			else:
 				mem["estado"] = "morta"
 				mem["semente"] = ""
+				mem["dias_vivos"] = 0
 				
 		# Zera a água e adubo para o dia seguinte
 		mem["agua"] = 0
