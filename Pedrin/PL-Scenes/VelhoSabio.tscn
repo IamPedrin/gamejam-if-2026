@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cucxwatfq7r6h"]
 
-[ext_resource type="Script" uid="uid://cpqp3k4mjh0ni" path="res://Pedrin/PL-Scenes/velhosabio.gd" id="1_anc55"]
+[ext_resource type="Script" uid="uid://cpqp3k4mjh0ni" path="res://Pedrin/PL-Scripts/velhosabio.gd" id="1_anc55"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5k018"]
 size = Vector2(4, 1)

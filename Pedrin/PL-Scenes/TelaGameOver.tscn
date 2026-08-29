@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dumptxtaxdtv0"]
 
-[ext_resource type="Script" uid="uid://ctc4dv7rb14dj" path="res://Pedrin/PL-Scenes/tela_game_over.gd" id="1_8xgah"]
+[ext_resource type="Script" uid="uid://ctc4dv7rb14dj" path="res://Pedrin/PL-Scripts/tela_game_over.gd" id="1_8xgah"]
 
 [node name="TelaGameOver" type="CanvasLayer" unique_id=1849575248]
 script = ExtResource("1_8xgah")

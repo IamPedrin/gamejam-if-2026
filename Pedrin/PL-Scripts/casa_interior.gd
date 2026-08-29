@@ -3,8 +3,9 @@ extends Node2D
 
 
 func _ready() -> void:
-	if Global.entrada_alvo != "":
-		var spawn_carregado = get_node_or_null(Global.entrada_alvo)
-		if spawn_carregado:
-			player.global_position = spawn_carregado.global_position
-		Global.entrada_alvo = ""
+	# Faz a casa escutar o relógio e te fazer dormir se der meia noite
+	SistemaTempo.meia_noite.connect(_desmaiar_na_casa)
+
+func _desmaiar_na_casa() -> void:
+	# Passa o dia automaticamente e verifica as regras
+	Global.dormir_e_processar_dia(get_tree())

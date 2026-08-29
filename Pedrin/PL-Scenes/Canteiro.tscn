@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cx3csmlq5yb4m"]
 
-[ext_resource type="Script" uid="uid://cgnbny8e0a512" path="res://Pedrin/PL-Scenes/canteiro.gd" id="1_obg6o"]
+[ext_resource type="Script" uid="uid://cgnbny8e0a512" path="res://Pedrin/PL-Scripts/canteiro.gd" id="1_obg6o"]
 [ext_resource type="Texture2D" uid="uid://doc5v6l3we70x" path="res://Pedrin/PL-Sprites/Tileset Spring.png" id="2_2ylkq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h6d8w"]
