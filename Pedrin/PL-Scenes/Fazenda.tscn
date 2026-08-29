@@ -1626,10 +1626,6 @@ position = Vector2(-40, 10)
 [node name="SaidaPorta" type="Marker2D" parent="." unique_id=1406347000]
 position = Vector2(4, 10)
 
-[node name="PlayerTd" parent="." unique_id=958454402 instance=ExtResource("4_a6tru")]
-z_index = 5
-position = Vector2(-182, 11)
-
 [node name="UiRelogio" parent="." unique_id=647822281 instance=ExtResource("8_fib35")]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1812071273]
@@ -1673,5 +1669,8 @@ stream = ExtResource("14_1vlnf")
 volume_db = -11.254
 autoplay = true
 parameters/looping = true
+
+[node name="PlayerTd" parent="." unique_id=834825110 instance=ExtResource("4_a6tru")]
+position = Vector2(-44, 19)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
