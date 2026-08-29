@@ -11,7 +11,7 @@ var dicas_diarias = {
 	3: "Sojentas no verão bebem pouca água.",
 	4: "sojentas no frio crescem mais e bebem mais água.",
 	5: "Os Tomatuxos no outono gostam de adubo.",
-	6: "Quanto mais frio menos os Tomatuxos bebm água.",
+	6: "Quanto mais frio menos os Tomatuxos bewbm água.",
 	7: "As Sojentas no frio devem ser regadas dia sim dia não.",
 	8: "As sojentas não bebem água ao invés disso precisam de adubo se não morrem.",
 	9: "Para os Tomatuxos o equilíbrio é a chave.",
