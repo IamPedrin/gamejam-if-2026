@@ -11,7 +11,7 @@ func _ready() -> void:
 			plantas_vivas += 1
 
 	# Personaliza a mensagem baseada no desempenho
-	if plantas_vivas >= 6: 
+	if plantas_vivas >= 6:
 		estatisticas.text = "Todas as " + str(plantas_vivas) + " plantas chegaram à fase adulta!"
 	else:
 		estatisticas.text = "Parabéns!\nVocê sobreviveu 1 ano e salvou " + str(plantas_vivas) + " plantas."

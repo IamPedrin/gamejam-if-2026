@@ -11,15 +11,15 @@ var dias_vivos: int = 0
 
 var requisitos_sementes = {
 	"Semente_1": {
-		"Primavera": {"agua": 1, "fert": 0},
-		"Verão":     {"agua": 1, "fert": 0},
-		"Outono":    {"agua": 1, "fert": 0},
-		"Inverno":   {"agua": 1, "fert": 0}
+		"Primavera": {"agua": 2, "fert": 1},
+		"Verão":     {"agua": 3, "fert": 1},
+		"Outono":    {"agua": 2, "fert": 1},
+		"Inverno":   {"agua": 1, "fert": 3}
 	},
 	"Semente_2": {
-		"Primavera": {"agua": 1, "fert": 0},
+		"Primavera": {"agua": 1, "fert": 1},
 		"Verão":     {"agua": 1, "fert": 0}, 
-		"Outono":    {"agua": 1, "fert": 0},
+		"Outono":    {"agua": 2, "fert": 2},
 		"Inverno":   {"agua": 1, "fert": 0}  
 	}
 }

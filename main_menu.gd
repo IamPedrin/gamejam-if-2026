@@ -21,7 +21,7 @@ func _on_iniciar_pressed() -> void:
 	Global.estado_dos_canteiros.clear()
 	
 	# Carrega a cena do jogo (confirme se o caminho está exato)
-	get_tree().change_scene_to_file("res://Pedrin/PL-Scenes/Fazenda.tscn")
+	get_tree().change_scene_to_file("res://Pedrin/PL-Scenes/explicacao.tscn")
 
 func _on_creditos_pressed() -> void:
 	sound_main.stop()

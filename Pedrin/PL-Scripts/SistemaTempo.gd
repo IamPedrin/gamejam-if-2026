@@ -5,7 +5,7 @@ signal meia_noite
 signal dia_mudou(dia: int, estacao: String) # Novo sinal para atualizar a HUD
 
 const MINUTOS_TOTAIS_DIA = 17.0 * 60.0 
-const SEGUNDOS_REAIS = 30.0 
+const SEGUNDOS_REAIS = 120.0 
 
 var tempo_passado: float = 0.0
 var relogio_rodando: bool = true
