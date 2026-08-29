@@ -27,4 +27,4 @@ func _desmaiar_meia_noite() -> void:
 func _acordar_na_casa() -> void:
 	Global.entrada_alvo = "SpawnCama" # Crie um Marker2D na casa perto da cama com esse nome
 	SistemaTempo.resetar_dia() # Reinicia o relógio para as 7h
-	get_tree().change_scene_to_file("res://casa_interior.tscn") # Ajuste o nome do arquivo
+	get_tree().change_scene_to_file("res://Pedrin/PL-Scenes/CasaInterior.tscn")
