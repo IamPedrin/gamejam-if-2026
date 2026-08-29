@@ -2,6 +2,7 @@ extends Node
 
 var entrada_alvo: String = ""
 var item_equipado: String = ""
+var jogador_travado: bool = false
 
 var qtd_sementes = {
 	"Semente_1": 3,
