@@ -31,7 +31,6 @@ func interagir() -> void:
 
 func _abrir_dialogo() -> void:
 	var dia_hoje = SistemaTempo.dia_atual
-	
 	var frase = "O tempo está louco hoje, não acha?"
 	
 	if dicas_diarias.has(dia_hoje):
@@ -40,7 +39,14 @@ func _abrir_dialogo() -> void:
 	texto_dialogo.text = frase
 	caixa_dialogo.visible = true
 	dialogo_aberto = true
+	
+	SistemaTempo.relogio_rodando = false
+	Global.jogador_travado = true
 
 func _fechar_dialogo() -> void:
 	caixa_dialogo.visible = false
 	dialogo_aberto = false
+	
+	# NOVO: O relógio volta a correr e o jogador volta a andar
+	SistemaTempo.relogio_rodando = true
+	Global.jogador_travado = false

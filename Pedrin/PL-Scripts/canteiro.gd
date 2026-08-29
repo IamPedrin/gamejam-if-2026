@@ -4,12 +4,11 @@ var estado_terra: String = "normal"
 var tipo_semente_plantada: String = "" 
 var agua_recebida: int = 0
 var fertilizante_recebido: int = 0
-var dias_vivos: int = 0 # Controla a idade da planta
+var dias_vivos: int = 0 
 
 @onready var sprite_terra = $Sprite2D
-@onready var sprite_planta = $SpritePlanta # O novo nó que criamos
+@onready var sprite_planta = $SpritePlanta 
 
-# O dicionário que estava faltando!
 var requisitos_sementes = {
 	"Semente_1": {
 		"Primavera": {"agua": 1, "fert": 0},
@@ -25,13 +24,12 @@ var requisitos_sementes = {
 	}
 }
 
-# Cadastre os caminhos (preload) das suas 4 artes para cada planta
 var texturas_plantas = {
 	"Semente_1": [
-		preload("res://Pedrin/PL-Sprites/Milhos/milhoSeed.tres"), # Fase 0 (Estação 1)
-		preload("res://Pedrin/PL-Sprites/Milhos/milho2.tres"),   # Fase 1 (Estação 2)
-		preload("res://Pedrin/PL-Sprites/Milhos/milho3.tres"),   # Fase 2 (Estação 3)
-		preload("res://Pedrin/PL-Sprites/Milhos/milho4.tres")   # Fase 3 (Estação 4)
+		preload("res://Pedrin/PL-Sprites/Milhos/milhoSeed.tres"), 
+		preload("res://Pedrin/PL-Sprites/Milhos/milho2.tres"),   
+		preload("res://Pedrin/PL-Sprites/Milhos/milho3.tres"),   
+		preload("res://Pedrin/PL-Sprites/Milhos/milho4.tres")   
 	],
 	"Semente_2": [
 		preload("res://Pedrin/PL-Sprites/Cafes/cafeSeed.tres"),
@@ -66,7 +64,9 @@ func _salvar_estado() -> void:
 	}
 
 func _atualizar_visuais() -> void:
-	# 1. VISUAL DA TERRA
+	# Reseta posição visual
+	sprite_planta.position.y = 0
+
 	if estado_terra == "normal":
 		sprite_terra.modulate = Color("ffffff") 
 	elif estado_terra == "arado" or estado_terra == "com_semente":
@@ -75,18 +75,20 @@ func _atualizar_visuais() -> void:
 			sprite_terra.modulate = sprite_terra.modulate.darkened(0.2)
 	elif estado_terra == "morta":
 		sprite_terra.modulate = Color("1a1a1a")
+		sprite_planta.visible = true
+		sprite_planta.position.y = -10 # Sobe a planta morta
+		sprite_planta.texture = preload("res://Pedrin/PL-Sprites/morte/mortePlanta.tres")
 
-	# 2. VISUAL DA PLANTAÇÃO
 	if estado_terra == "com_semente" and texturas_plantas.has(tipo_semente_plantada):
 		sprite_planta.visible = true
+		sprite_planta.position.y = -10 # Sobe a planta viva
 		
 		var fase_atual = dias_vivos / 3 
-		
 		if fase_atual > 3:
 			fase_atual = 3
 			
 		sprite_planta.texture = texturas_plantas[tipo_semente_plantada][fase_atual]
-	else:
+	elif estado_terra != "morta":
 		sprite_planta.visible = false
 		sprite_planta.texture = null
 
@@ -94,8 +96,13 @@ func interagir() -> void:
 	var item_na_mao = Global.item_equipado
 	var interagiu = false 
 	
-	if item_na_mao == "Enxada" and estado_terra == "normal":
+	# CORREÇÃO: Agora a enxada consegue limpar tanto a terra normal quanto a morta
+	if item_na_mao == "Enxada" and (estado_terra == "normal" or estado_terra == "morta"):
 		estado_terra = "arado"
+		tipo_semente_plantada = ""
+		agua_recebida = 0
+		fertilizante_recebido = 0
+		dias_vivos = 0
 		interagiu = true
 		
 	elif requisitos_sementes.has(item_na_mao) and estado_terra == "arado":
