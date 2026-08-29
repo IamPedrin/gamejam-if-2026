@@ -28,17 +28,17 @@ func dormir_e_processar_dia(arvore_de_cenas: SceneTree) -> void:
 			
 			if semente == "Semente_1":
 				if estacao == "Primavera": req_agua = 1; req_fert = 0
-				elif estacao == "Verão": req_agua = 2; req_fert = 1
-				elif estacao == "Outono": req_agua = 1; req_fert = 1
-				elif estacao == "Inverno": req_agua = 0; req_fert = 2
+				elif estacao == "Verão": req_agua = 1; req_fert = 0
+				elif estacao == "Outono": req_agua = 1; req_fert = 0
+				elif estacao == "Inverno": req_agua = 1; req_fert = 0
 			elif semente == "Semente_1":
-				if estacao == "Primavera": req_agua = 2; req_fert = 1
-				elif estacao == "Verão": req_agua = 3; req_fert = 2
-				elif estacao == "Outono": req_agua = 2; req_fert = 0
-				elif estacao == "Inverno": req_agua = 1; req_fert = 3
+				if estacao == "Primavera": req_agua = 1; req_fert = 0
+				elif estacao == "Verão": req_agua = 1; req_fert = 0
+				elif estacao == "Outono": req_agua = 1; req_fert = 0
+				elif estacao == "Inverno": req_agua = 1; req_fert = 0
 
 			# Julga sobrevivência
-			if mem["agua"] >= req_agua and mem["fert"] >= req_fert:
+			if mem["agua"] == req_agua and mem["fert"] == req_fert:
 				plantas_vivas += 1
 			else:
 				mem["estado"] = "morta"

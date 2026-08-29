@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dbr3jkc65kr01" path="res://Pedrin/PL-Sprites/House.png" id="2_cht8j"]
 [ext_resource type="Script" uid="uid://dasjj4uyhkqxl" path="res://Pedrin/PL-Scripts/entrar_casa.gd" id="3_iysvh"]
 [ext_resource type="PackedScene" uid="uid://5cxhsrj8ia5h" path="res://Pedrin/PL-Scenes/UI_Relogio.tscn" id="5_y5qpv"]
+[ext_resource type="Script" uid="uid://b5nxgkk7plcfe" path="res://Pedrin/PL-Scenes/interacao_cama.gd" id="6_r5hej"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iysvh"]
 texture = ExtResource("2_cht8j")
@@ -88,6 +89,8 @@ sources/0 = SubResource("TileSetAtlasSource_iysvh")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cht8j"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2kgv"]
+
 [node name="CasaInterior" type="Node2D" unique_id=2143904350]
 script = ExtResource("1_qgsf3")
 
@@ -116,5 +119,13 @@ position = Vector2(50, -32)
 zoom = Vector2(4.86, 4.86)
 
 [node name="UiRelogio" parent="." unique_id=647822281 instance=ExtResource("5_y5qpv")]
+
+[node name="InteracaoCama" type="Area2D" parent="." unique_id=318804504]
+position = Vector2(-19, -48)
+script = ExtResource("6_r5hej")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteracaoCama" unique_id=1052201369]
+shape = SubResource("RectangleShape2D_d2kgv")
+debug_color = Color(0.8058112, 0.36258185, 0.53990287, 0.41960785)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
