@@ -1,6 +1,7 @@
 extends Control
 
 @onready var painel_creditos = $PainelCreditos
+@onready var sound: AudioStreamPlayer2D = $sound
 
 func _ready() -> void:
 	# Garante de forma extra que os créditos não apareçam ao iniciar o jogo
@@ -20,6 +21,7 @@ func _on_iniciar_pressed() -> void:
 	get_tree().change_scene_to_file("res://Pedrin/PL-Scenes/Fazenda.tscn")
 
 func _on_creditos_pressed() -> void:
+	sound.play()
 	painel_creditos.visible = true
 
 func _on_sair_pressed() -> void:
@@ -28,4 +30,5 @@ func _on_sair_pressed() -> void:
 # --- Função do Botão de Fechar os Créditos ---
 
 func _on_botao_fechar_pressed() -> void:
+	sound.stop()
 	painel_creditos.visible = false
