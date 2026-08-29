@@ -287,14 +287,12 @@ debug_color = Color(0.8075392, 0.4123529, 0.11511753, 0.41960785)
 [node name="SpriteFerramenta" type="Sprite2D" parent="Player" unique_id=1357744600]
 visible = false
 position = Vector2(5, -6)
+
 [node name="foice" type="AudioStreamPlayer" parent="Player" unique_id=1484276852]
 stream = SubResource("AudioStreamMP3_5g88p")
-bus = &"FSX"
 
 [node name="regar" type="AudioStreamPlayer" parent="Player" unique_id=1053837204]
 stream = ExtResource("4_bflfu")
-bus = &"FSX"
 
 [node name="seeds" type="AudioStreamPlayer" parent="Player" unique_id=1119739819]
 stream = ExtResource("5_vdgps")
-bus = &"FSX"

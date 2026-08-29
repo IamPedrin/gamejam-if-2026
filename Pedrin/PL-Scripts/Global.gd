@@ -1,4 +1,5 @@
 extends Node
+
 var entrada_alvo: String = ""
 var item_equipado: String = ""
 
@@ -9,7 +10,6 @@ var qtd_sementes = {
 
 var estado_dos_canteiros: Dictionary = {}
 
-# Essa função centraliza TUDO sobre virar a noite
 func dormir_e_processar_dia(arvore_de_cenas: SceneTree) -> void:
 	SistemaTempo.avancar_dia()
 	var dia = SistemaTempo.dia_atual
@@ -17,7 +17,6 @@ func dormir_e_processar_dia(arvore_de_cenas: SceneTree) -> void:
 	
 	var plantas_vivas = 0
 
-	# 1. PROCESSA A MEMÓRIA DIRETAMENTE (Funciona mesmo dentro de casa!)
 	for nome_canteiro in estado_dos_canteiros.keys():
 		var mem = estado_dos_canteiros[nome_canteiro]
 		
@@ -27,18 +26,12 @@ func dormir_e_processar_dia(arvore_de_cenas: SceneTree) -> void:
 			var req_fert = 0
 			
 			if semente == "Semente_1":
-				if estacao == "Primavera": req_agua = 1; req_fert = 0
-				elif estacao == "Verão": req_agua = 1; req_fert = 0
-				elif estacao == "Outono": req_agua = 1; req_fert = 0
-				elif estacao == "Inverno": req_agua = 1; req_fert = 0
+				req_agua = 1; req_fert = 0
 			elif semente == "Semente_2":
-				if estacao == "Primavera": req_agua = 1; req_fert = 0
-				elif estacao == "Verão": req_agua = 1; req_fert = 0
-				elif estacao == "Outono": req_agua = 1; req_fert = 0
-				elif estacao == "Inverno": req_agua = 1; req_fert = 0
+				req_agua = 1; req_fert = 0
 
-			# Julga sobrevivência
-			if mem["agua"] == req_agua and mem["fert"] == req_fert:
+			# CORREÇÃO: Usa >= para que excessos acidentais não matem a planta
+			if mem["agua"] >= req_agua and mem["fert"] >= req_fert:
 				plantas_vivas += 1
 				if not mem.has("dias_vivos"):
 					mem["dias_vivos"] = 0
@@ -48,16 +41,13 @@ func dormir_e_processar_dia(arvore_de_cenas: SceneTree) -> void:
 				mem["semente"] = ""
 				mem["dias_vivos"] = 0
 				
-		# Zera a água e adubo para o dia seguinte
 		mem["agua"] = 0
 		mem["fert"] = 0
 
-	# 2. Faz as sementes sumirem no Dia 2
 	if dia == 2:
 		qtd_sementes["Semente_1"] = 0
 		qtd_sementes["Semente_2"] = 0
 
-	# 3. CONDIÇÕES DE TELA
 	if dia > 12:
 		arvore_de_cenas.change_scene_to_file("res://Pedrin/PL-Scenes/TelaVitoria.tscn")
 		return
@@ -66,6 +56,5 @@ func dormir_e_processar_dia(arvore_de_cenas: SceneTree) -> void:
 		arvore_de_cenas.change_scene_to_file("res://Pedrin/PL-Scenes/TelaGameOver.tscn")
 		return
 
-	# 4. Se sobreviveu, acorda normalmente
 	entrada_alvo = "SpawnCama"
 	arvore_de_cenas.change_scene_to_file("res://Pedrin/PL-Scenes/CasaInterior.tscn")
