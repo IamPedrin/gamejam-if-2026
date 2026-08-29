@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*uid://0b8ikw1wl0hc"
 SistemaTempo="*uid://dqctwnxikjyni"
+Database="*uid://ury8l6wcb15t"
 
 [display]
 

@@ -25,45 +25,75 @@ custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 color = Color(0.6313726, 0.38431373, 0.22352941, 1)
 
-[node name="ColorRect2" type="ColorRect" parent="HBoxContainer" unique_id=214706493]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ColorRect" unique_id=372780958]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ColorRect2" type="ColorRect" parent="HBoxContainer" unique_id=640558995]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 color = Color(0.6313726, 0.38431373, 0.22352941, 1)
 
-[node name="ColorRect3" type="ColorRect" parent="HBoxContainer" unique_id=1342911698]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ColorRect2" unique_id=1697557135]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ColorRect3" type="ColorRect" parent="HBoxContainer" unique_id=404802094]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 color = Color(0.6313726, 0.38431373, 0.22352941, 1)
 
-[node name="ColorRect4" type="ColorRect" parent="HBoxContainer" unique_id=1818557249]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ColorRect3" unique_id=1421539548]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ColorRect4" type="ColorRect" parent="HBoxContainer" unique_id=295873027]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 color = Color(0.6313726, 0.38431373, 0.22352941, 1)
 
-[node name="ColorRect5" type="ColorRect" parent="HBoxContainer" unique_id=215697038]
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ColorRect4" unique_id=302764500]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ColorRect5" type="ColorRect" parent="HBoxContainer" unique_id=1608782458]
 custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 color = Color(0.6313726, 0.38431373, 0.22352941, 1)
 
-[node name="ColorRect6" type="ColorRect" parent="HBoxContainer" unique_id=1581854045]
-custom_minimum_size = Vector2(40, 40)
-layout_mode = 2
-color = Color(0.6313726, 0.38431373, 0.22352941, 1)
-
-[node name="ColorRect7" type="ColorRect" parent="HBoxContainer" unique_id=1785725482]
-custom_minimum_size = Vector2(40, 40)
-layout_mode = 2
-color = Color(0.6313726, 0.38431373, 0.22352941, 1)
-
-[node name="ColorRect8" type="ColorRect" parent="HBoxContainer" unique_id=1058784646]
-custom_minimum_size = Vector2(40, 40)
-layout_mode = 2
-color = Color(0.6313726, 0.38431373, 0.22352941, 1)
-
-[node name="ColorRect9" type="ColorRect" parent="HBoxContainer" unique_id=100348569]
-custom_minimum_size = Vector2(40, 40)
-layout_mode = 2
-color = Color(0.6313726, 0.38431373, 0.22352941, 1)
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/ColorRect5" unique_id=693029291]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="SeletorVisual" type="ReferenceRect" parent="." unique_id=1827839936]
 offset_left = 778.5

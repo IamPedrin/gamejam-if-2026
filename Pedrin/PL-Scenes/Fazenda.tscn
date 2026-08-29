@@ -1657,4 +1657,13 @@ position = Vector2(-14, 52)
 position = Vector2(-14, 41)
 scale = Vector2(0.99465036, 0.9588634)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2006235498]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1054705400]
+offset_left = -177.0
+offset_top = -96.0
+offset_right = 176.0
+offset_bottom = 97.0
+color = Color(0, 0, 0, 0)
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

@@ -1,40 +1,40 @@
 extends Node2D
 
-var dados_dos_itens = {
-	"enxada": {
+var itens = {
+	"Enxada": {
 		"tipo": "ferramenta",
 		"estocavel": false,
 		"max_qtd": 1,
-		#"textura": preload("res://sprites/enxada.png")
+		"textura": preload("res://Pedrin/PL-Sprites/enxada.tres")
 	},
-	"regador": {
+	"Regador": {
 		"tipo": "ferramenta",
 		"estocavel": false,
 		"max_qtd": 1,
 		"capacidade_agua": 10, # Sistema de encher o regador
 		"agua_atual": 0,
-		#"textura": preload("res://sprites/regador.png")
+		"textura": preload("res://Pedrin/PL-Sprites/WateringCan.png")
 	},
-	"semente_1": {
+	"Semente_1": {
 		"tipo": "semente",
 		"estocavel": true,
 		"max_qtd": 99,
 		#"cena_planta": preload("res://plantas/tomate.tscn"), # O que vai nascer
-		#"textura": preload("res://sprites/semente_tomate.png")
+		"textura": preload("res://Pedrin/PL-Sprites/milho.tres")
 	},
 	
-	"semente_2": {
+	"Semente_2": {
 		"tipo": "semente",
 		"estocavel": true,
 		"max_qtd": 99,
 		#"cena_planta": preload("res://plantas/tomate.tscn"), # O que vai nascer
-		#"textura": preload("res://sprites/semente_tomate.png")
+		"textura": preload("res://Pedrin/PL-Sprites/cafee.tres")
 	},
-		"Fertilizante": {
+	"Fertilizante": {
 		"tipo": "fertilizante",
 		"estocavel": true,
 		"max_qtd": 99,
 		#"cena_planta": preload("res://plantas/tomate.tscn"), # O que vai nascer
-		#"textura": preload("res://sprites/semente_tomate.png")
+		"textura": preload("res://Pedrin/PL-Sprites/fertilizante.tres")
 	}
 }

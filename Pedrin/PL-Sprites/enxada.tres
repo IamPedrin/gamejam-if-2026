@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://b3y43202jypi1"]
+
+[ext_resource type="Texture2D" uid="uid://3ywfgmt1n481" path="res://Pedrin/PL-Sprites/16x16_weapons.png" id="1_rn76h"]
+
+[resource]
+atlas = ExtResource("1_rn76h")
+region = Rect2(110.28523, 16.042295, 16, 16)

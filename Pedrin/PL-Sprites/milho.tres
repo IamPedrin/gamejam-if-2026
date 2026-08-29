@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://dq4djwnhkc8rx"]
+
+[ext_resource type="Texture2D" uid="uid://cvu7lkin7ggon" path="res://Pedrin/PL-Sprites/Simpl-Veggies-Free-Sample-16x16.png" id="1_irjst"]
+
+[resource]
+atlas = ExtResource("1_irjst")
+region = Rect2(0.1265893, 32.018055, 16, 16)

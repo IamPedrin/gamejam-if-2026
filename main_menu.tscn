@@ -27,7 +27,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_06t4h")
-cena_do_jogo = "uid://crtc4wsehmlrb"
+cena_do_jogo = "uid://cmlxu2xluqlws"
 
 [node name="O5RK3" type="Sprite2D" parent="." unique_id=639237823]
 position = Vector2(574, 317)

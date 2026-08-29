@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://c4j1ksmgkc7qg"]
+
+[ext_resource type="Texture2D" uid="uid://cxpysvhpad7vt" path="res://Pedrin/PL-Sprites/farm tool icons calciumtrice.png" id="1_0xt3b"]
+
+[resource]
+atlas = ExtResource("1_0xt3b")
+region = Rect2(70.30502, 8.080517, 51.93038, 48.3437)
