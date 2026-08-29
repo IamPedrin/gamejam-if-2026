@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://c0u1gp3adoy8g"]
+
+[ext_resource type="Texture2D" uid="uid://cmtwb0g2yanjs" path="res://Nicolas/Basic Plants.png" id="1_imq1r"]
+[ext_resource type="Script" uid="uid://dfofaxlvg0kul" path="res://tomate.gd" id="1_qujxq"]
+[ext_resource type="PackedScene" uid="uid://dvru7yfrsbi5k" path="res://Pedrin/PL-Scenes/PlayerTD.tscn" id="3_qujxq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vlo66"]
+size = Vector2(24.260021, 23.407928)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i61qf"]
+atlas = ExtResource("1_imq1r")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dwjm"]
+atlas = ExtResource("1_imq1r")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1gk01"]
+atlas = ExtResource("1_imq1r")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhr0x"]
+atlas = ExtResource("1_imq1r")
+region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_464px"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i61qf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dwjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1gk01")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhr0x")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D" unique_id=1775558450]
+monitorable = false
+script = ExtResource("1_qujxq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1076659123]
+position = Vector2(96, 67)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_vlo66")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D" unique_id=796932399]
+position = Vector2(0.6300125, -1.7960358)
+scale = Vector2(1.46875, 1.4375)
+sprite_frames = SubResource("SpriteFrames_464px")
+frame_progress = 0.16569346
+
+[node name="PlayerTd" parent="." unique_id=958454402 instance=ExtResource("3_qujxq")]
+position = Vector2(132, 72)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
