@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://dyriikf6bdl24"]
+
+[ext_resource type="Script" uid="uid://b0xi54k8ysemk" path="res://Pedrin/PL-Scripts/tela_vitoria.gd" id="1_kb7q1"]
+
+[node name="TelaVitoria" type="CanvasLayer" unique_id=964329764]
+script = ExtResource("1_kb7q1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2125470775]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Vitoria" type="Label" parent="." unique_id=1363209914]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -241.0
+offset_top = -18.0
+offset_right = 241.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "As estações estão ao seu favor. Parabéns!"
+
+[node name="Estatisticas" type="Label" parent="." unique_id=1679629279]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -241.0
+offset_top = 55.0
+offset_right = 241.0
+offset_bottom = 89.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 19
+horizontal_alignment = 1
+
+[node name="BotaoRecomecar" type="Button" parent="." unique_id=1593101080]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.5
+offset_top = -31.0
+offset_right = 64.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Menu Principal "
+
+[connection signal="pressed" from="BotaoRecomecar" to="." method="_on_botao_recomecar_pressed"]

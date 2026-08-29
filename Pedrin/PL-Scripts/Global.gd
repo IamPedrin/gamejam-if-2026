@@ -31,7 +31,7 @@ func dormir_e_processar_dia(arvore_de_cenas: SceneTree) -> void:
 				elif estacao == "Verão": req_agua = 1; req_fert = 0
 				elif estacao == "Outono": req_agua = 1; req_fert = 0
 				elif estacao == "Inverno": req_agua = 1; req_fert = 0
-			elif semente == "Semente_1":
+			elif semente == "Semente_2":
 				if estacao == "Primavera": req_agua = 1; req_fert = 0
 				elif estacao == "Verão": req_agua = 1; req_fert = 0
 				elif estacao == "Outono": req_agua = 1; req_fert = 0
@@ -51,7 +51,7 @@ func dormir_e_processar_dia(arvore_de_cenas: SceneTree) -> void:
 	# 2. Faz as sementes sumirem no Dia 2
 	if dia == 2:
 		qtd_sementes["Semente_1"] = 0
-		qtd_sementes["Semente_1"] = 0
+		qtd_sementes["Semente_2"] = 0
 
 	# 3. CONDIÇÕES DE TELA
 	if dia > 12:
