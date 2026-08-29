@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://5cxhsrj8ia5h" path="res://Pedrin/PL-Scenes/UI_Relogio.tscn" id="5_y5qpv"]
 [ext_resource type="Texture2D" uid="uid://cy8gv27n2m51d" path="res://Nicolas/4 Walls, Floor & Doors.png" id="5_yfc3t"]
 [ext_resource type="Script" uid="uid://b5nxgkk7plcfe" path="res://Pedrin/PL-Scripts/interacao_cama.gd" id="6_r5hej"]
+[ext_resource type="AudioStream" uid="uid://cu6aslk2asjf8" path="res://kauaUI/Morning in the Storybook Village.mp3" id="10_ah356"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iysvh"]
 texture = ExtResource("2_cht8j")
@@ -767,5 +768,11 @@ script = ExtResource("6_r5hej")
 position = Vector2(-5, 4)
 shape = SubResource("RectangleShape2D_d2kgv")
 debug_color = Color(0.8058112, 0.36258185, 0.53990287, 0.41960785)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=98840161]
+stream = ExtResource("10_ah356")
+volume_db = -12.498
+autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

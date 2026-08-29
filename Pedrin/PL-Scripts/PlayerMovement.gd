@@ -3,6 +3,11 @@ extends CharacterBody2D
 @export var speed: float = 50
 @onready var anim = $AnimatedSprite2D
 @onready var area_interacao = $AreaInteracao
+@onready var foice: AudioStreamPlayer = $foice
+@onready var regar: AudioStreamPlayer = $regar
+@onready var seeds: AudioStreamPlayer = $seeds
+
+
 
 var last_direction = "down"
 
@@ -48,5 +53,17 @@ func tentar_interagir() -> void:
 	var objetos_proximos = area_interacao.get_overlapping_areas()
 	for objeto in objetos_proximos:
 		if objeto is Interactable:
+			print(Global.item_equipado)
+			if (Global.item_equipado == "Enxada"):
+				foice.play(10)
+			if (Global.item_equipado == "Regador"):
+				regar.play(23)
+			if (Global.item_equipado == "Fertilizante"):
+				seeds.play()
+			if (Global.item_equipado == "Semente_1"):
+				seeds.play()
+			if (Global.item_equipado == "Semente_2"):
+				seeds.play()
+			
 			objeto.interagir()
 			break

@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cucxwatfq7r6h" path="res://Pedrin/PL-Scenes/VelhoSabio.tscn" id="9_7w21y"]
 [ext_resource type="PackedScene" uid="uid://dg4lgsguohsxp" path="res://Pedrin/PL-Scenes/HUD_Hotbar.tscn" id="10_p0xcc"]
 [ext_resource type="PackedScene" uid="uid://cx3csmlq5yb4m" path="res://Pedrin/PL-Scenes/Canteiro.tscn" id="11_p0xcc"]
+[ext_resource type="AudioStream" uid="uid://cu6aslk2asjf8" path="res://kauaUI/Morning in the Storybook Village.mp3" id="14_1vlnf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3001q"]
 texture = ExtResource("1_a6tru")
@@ -1665,5 +1666,11 @@ offset_top = -96.0
 offset_right = 176.0
 offset_bottom = 97.0
 color = Color(0, 0, 0, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1575043669]
+stream = ExtResource("14_1vlnf")
+volume_db = -11.254
+autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
