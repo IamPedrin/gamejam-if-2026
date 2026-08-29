@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cucxwatfq7r6h"]
+
+[ext_resource type="Script" uid="uid://cpqp3k4mjh0ni" path="res://Pedrin/PL-Scenes/velhosabio.gd" id="1_anc55"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5k018"]
+size = Vector2(4, 1)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5k018"]
+radius = 4.0
+height = 16.0
+
+[node name="VelhoSabio" type="StaticBody2D" unique_id=1067142179]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1700544252]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1740874850]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_5k018")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=513702938]
+script = ExtResource("1_anc55")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1721244553]
+position = Vector2(0, -6)
+shape = SubResource("CapsuleShape2D_5k018")

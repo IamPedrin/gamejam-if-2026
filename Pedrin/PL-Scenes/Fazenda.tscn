@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://t4xkoeihnp3h" path="res://Pedrin/PL-Sprites/Fence's copiar.png" id="3_3001q"]
 [ext_resource type="Script" uid="uid://dasjj4uyhkqxl" path="res://Pedrin/PL-Scripts/entrar_casa.gd" id="3_lixew_script"]
 [ext_resource type="PackedScene" uid="uid://dvru7yfrsbi5k" path="res://Pedrin/PL-Scenes/PlayerTD.tscn" id="4_a6tru"]
+[ext_resource type="Script" uid="uid://b4cxtykms06s7" path="res://Pedrin/PL-Scenes/telaDiaNoite.gd" id="7_8ciov"]
+[ext_resource type="PackedScene" uid="uid://5cxhsrj8ia5h" path="res://Pedrin/PL-Scenes/UI_Relogio.tscn" id="8_fib35"]
+[ext_resource type="PackedScene" uid="uid://cucxwatfq7r6h" path="res://Pedrin/PL-Scenes/VelhoSabio.tscn" id="9_7w21y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3001q"]
 texture = ExtResource("1_a6tru")
@@ -416,5 +419,13 @@ position = Vector2(4, 10)
 
 [node name="PlayerTd" parent="." unique_id=958454402 instance=ExtResource("4_a6tru")]
 position = Vector2(-44, 24)
+
+[node name="UiRelogio" parent="." unique_id=647822281 instance=ExtResource("8_fib35")]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1812071273]
+script = ExtResource("7_8ciov")
+
+[node name="VelhoSabio" parent="." unique_id=1067142179 instance=ExtResource("9_7w21y")]
+position = Vector2(22, 44)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

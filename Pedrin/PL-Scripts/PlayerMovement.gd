@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var speed: float = 50
 @onready var anim = $AnimatedSprite2D
+@onready var area_interacao = $AreaInteracao
 
 var last_direction = "down"
 
@@ -39,3 +40,13 @@ func update_animation(direction: Vector2) -> void:
 	anim.play("move_"+ anim_to_play)	
 	
 	
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("interagir"): 
+		tentar_interagir()
+
+func tentar_interagir() -> void:
+	var objetos_proximos = area_interacao.get_overlapping_areas()
+	for objeto in objetos_proximos:
+		if objeto is Interactable:
+			objeto.interagir()
+			break
