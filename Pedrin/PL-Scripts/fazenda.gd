@@ -39,12 +39,12 @@ func _acordar_na_casa() -> void:
 
 	# Faz as sementes sumirem do inventário no Dia 2
 	if dia == 2:
-		Global.qtd_sementes["Semente_Milho"] = 0
-		Global.qtd_sementes["Semente_Tomate"] = 0
+		Global.qtd_sementes["Semente_1"] = 0
+		Global.qtd_sementes["Semente_2"] = 0
 		print("As sementes não plantadas sumiram do seu inventário!")
 
 	# 3. Verifica as condições FINAIS antes de trocar de cena
-	if dia > 12:
+	if dia > 3:
 		print("VITÓRIA! Você sobreviveu o ano com ", plantas_vivas, " plantas.")
 		# Quando criar a cena de vitória, descomente e ajuste o caminho abaixo:
 		# get_tree().change_scene_to_file("res://Pedrin/PL-Scenes/TelaVitoria.tscn")
