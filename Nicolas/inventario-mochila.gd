@@ -22,8 +22,6 @@ func _ready() -> void:
 	# Cria a grade 7x4 vazia automaticamente ao iniciar o jogo
 	limpar_inventario()
 	
-	# 🔥 TESTE: Adicionando os itens dinamicamente via código!
-	# No seu jogo real, você vai chamar essas funções quando o jogador coletar o item do chão.
 	adicionar_item_na_marra("Foice")
 	adicionar_item_na_marra("Sementes")
 	adicionar_item_na_marra("Regador")

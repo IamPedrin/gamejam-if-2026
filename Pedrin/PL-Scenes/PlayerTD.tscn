@@ -252,7 +252,7 @@ radius = 4.0
 height = 18.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5g88p"]
-size = Vector2(10, 14.75)
+size = Vector2(9, 5.75)
 
 [node name="PlayerTd" type="Node2D" unique_id=958454402]
 
@@ -274,6 +274,7 @@ shape = SubResource("CapsuleShape2D_a6tru")
 [node name="AreaInteracao" type="Area2D" parent="Player" unique_id=804271225]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/AreaInteracao" unique_id=321784799]
-position = Vector2(1, -9.625)
+position = Vector2(0.9999998, -6)
+scale = Vector2(0.9554372, 0.9083434)
 shape = SubResource("RectangleShape2D_5g88p")
 debug_color = Color(0.8075392, 0.4123529, 0.11511753, 0.41960785)

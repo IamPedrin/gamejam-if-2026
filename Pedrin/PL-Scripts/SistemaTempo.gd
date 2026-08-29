@@ -4,7 +4,7 @@ signal tempo_atualizado(hora: int, minuto: int)
 signal meia_noite
 
 const MINUTOS_TOTAIS_DIA = 17.0 * 60.0 
-const SEGUNDOS_REAIS = 10.0
+const SEGUNDOS_REAIS = 180.0
 
 var tempo_passado: float = 0.0
 var relogio_rodando: bool = true
