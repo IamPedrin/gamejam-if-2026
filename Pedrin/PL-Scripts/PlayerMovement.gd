@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var speed: float = 50
 @onready var anim = $AnimatedSprite2D
 @onready var area_interacao = $AreaInteracao
+@onready var sprite_ferramenta = $SpriteFerramenta
 
 var last_direction = "down"
 
@@ -37,8 +38,7 @@ func update_animation(direction: Vector2) -> void:
 	last_direction = anim_dir
 	
 	var anim_to_play = "right" if anim_dir == "left" else anim_dir
-	anim.play("move_"+ anim_to_play)	
-	
+	anim.play("move_"+ anim_to_play)    
 	
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("interagir"): 
@@ -49,4 +49,37 @@ func tentar_interagir() -> void:
 	for objeto in objetos_proximos:
 		if objeto is Interactable:
 			objeto.interagir()
+			animar_uso_item() # <-- A animação agora é disparada aqui!
 			break
+			
+func animar_uso_item() -> void:
+	var item = Global.item_equipado
+	
+	if item == "" or not Database.itens.has(item): 
+		return
+		
+	var dados_item = Database.itens[item]
+	if not dados_item.has("textura") or dados_item["textura"] == null: 
+		return
+
+	# 1. Prepara o Sprite
+	sprite_ferramenta.texture = dados_item["textura"]
+	sprite_ferramenta.visible = true
+	
+	# 2. Ajusta a direção baseada em para onde o player olha
+	if last_direction == "left":
+		sprite_ferramenta.scale.x = -1 # Espelha para a esquerda
+	else:
+		sprite_ferramenta.scale.x = 1  # Mantém normal para direita/cima/baixo
+
+	# 3. Posição inicial (arma levantada / mão recuada)
+	sprite_ferramenta.rotation_degrees = -30
+	
+	# 4. Cria a Animação
+	var tween = create_tween()
+	
+	# Gira até 90 graus em 0.2 segundos
+	tween.tween_property(sprite_ferramenta, "rotation_degrees", 90, 0.2).set_trans(Tween.TRANS_SINE)
+	
+	# 5. Esconde o sprite assim que a animação termina
+	tween.tween_callback(func(): sprite_ferramenta.visible = false)

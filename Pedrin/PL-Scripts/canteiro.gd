@@ -66,6 +66,7 @@ func _salvar_estado() -> void:
 	}
 
 func _atualizar_visuais() -> void:
+	# 1. VISUAL DA TERRA
 	if estado_terra == "normal":
 		sprite_terra.modulate = Color("ffffff") 
 	elif estado_terra == "arado" or estado_terra == "com_semente":

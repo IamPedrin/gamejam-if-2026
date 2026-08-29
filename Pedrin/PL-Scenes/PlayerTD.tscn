@@ -278,3 +278,7 @@ position = Vector2(0.9999998, -6)
 scale = Vector2(0.9554372, 0.9083434)
 shape = SubResource("RectangleShape2D_5g88p")
 debug_color = Color(0.8075392, 0.4123529, 0.11511753, 0.41960785)
+
+[node name="SpriteFerramenta" type="Sprite2D" parent="Player" unique_id=1357744600]
+visible = false
+position = Vector2(5, -6)
