@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://dr1mwi8tlvk52" path="res://Minecraft.ttf" id="5_glbon"]
 [ext_resource type="Script" uid="uid://crfnic137mksi" path="res://Nicolas/scripts/label.gd" id="5_nlkkf"]
 [ext_resource type="AudioStream" uid="uid://cu6aslk2asjf8" path="res://kauaUI/Morning in the Storybook Village.mp3" id="6_nlkkf"]
+[ext_resource type="AudioStream" uid="uid://uybmjovovsmf" path="res://musiquinha.mp3" id="7_qe12f"]
 
 [node name="main menu" type="Control" unique_id=1839881705]
 layout_mode = 3
@@ -278,6 +279,9 @@ text = "FECHAR"
 
 [node name="sound" type="AudioStreamPlayer2D" parent="." unique_id=250531864]
 stream = ExtResource("6_nlkkf")
+
+[node name="sound_main" type="AudioStreamPlayer" parent="." unique_id=564346189]
+stream = ExtResource("7_qe12f")
 
 [connection signal="pressed" from="Iniciar" to="." method="_on_iniciar_pressed"]
 [connection signal="pressed" from="Creditos" to="." method="_on_creditos_pressed"]

@@ -88,13 +88,16 @@ func animar_uso_item() -> void:
 	sprite_ferramenta.texture = dados_item["textura"]
 	sprite_ferramenta.visible = true
 	
-	var escala_ideal = 0.5 # Diminua ou aumente este número até o tamanho ficar bom	
+	# Normalização: calcula a escala baseada no tamanho real da imagem
+	var tamanho_desejado = Vector2(12, 12) # Define o tamanho final em pixels
+	var tamanho_original = sprite_ferramenta.texture.get_size()
+	var escala_ideal = tamanho_desejado / tamanho_original
 	
 	# 2. Ajusta a direção baseada em para onde o player olha
 	if last_direction == "left":
-		sprite_ferramenta.scale = Vector2(-escala_ideal, escala_ideal) # Espelha
+		sprite_ferramenta.scale = Vector2(-escala_ideal.x, escala_ideal.y) # Espelha o X
 	else:
-		sprite_ferramenta.scale = Vector2(escala_ideal, escala_ideal)  # Normal
+		sprite_ferramenta.scale = escala_ideal # Normal
 
 	# 3. Posição inicial (arma levantada / mão recuada)
 	sprite_ferramenta.rotation_degrees = -30
