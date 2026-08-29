@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bkcdafxcqkahd"]
+
+[ext_resource type="Texture2D" uid="uid://d4g2altpl4ik8" path="res://Buttons.png" id="1_gtb43"]
+
+[node name="optionsmenu" type="Control" unique_id=1726130285]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="." unique_id=933355355]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Buttons" type="Sprite2D" parent="." unique_id=1042882549]
+position = Vector2(490, 335.00006)
+scale = Vector2(1.545904, 1.7750717)
+texture = ExtResource("1_gtb43")

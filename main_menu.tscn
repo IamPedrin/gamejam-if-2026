@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://crtc4wsehmlrb"]
+
+[ext_resource type="Script" uid="uid://bfl3cyvplu7dt" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://d4g2altpl4ik8" path="res://Buttons.png" id="2_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://cgjnggxb4q38o" path="res://kauaUI/o5_rK3.png" id="2_fu7sn"]
+[ext_resource type="AudioStream" uid="uid://cu6aslk2asjf8" path="res://kauaUI/Morning in the Storybook Village.mp3" id="4_glbon"]
+[ext_resource type="Texture2D" uid="uid://c8go5re4xcu0o" path="res://kauaUI/Buttons.png" id="4_nlkkf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tg2s5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7vrkn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jix8l"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_13qdw"]
+color = Color(0.8756708, 0.9036613, 0.7700984, 1)
+grow_begin = 70.0
+thickness = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8qtwp"]
+
+[node name="main menu" type="Control" unique_id=1839881705]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+cena_do_jogo = "uid://crtc4wsehmlrb"
+
+[node name="O5RK3" type="Sprite2D" parent="." unique_id=639237823]
+position = Vector2(574, 317)
+scale = Vector2(0.66218567, 0.6849012)
+texture = ExtResource("2_fu7sn")
+
+[node name="MainButtons" type="VBoxContainer" parent="." unique_id=1004836333]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -161.0
+offset_top = -95.0
+offset_right = 19.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.0071187, 2.566401)
+theme_override_constants/separation = 7
+
+[node name="PlayButton" type="Button" parent="MainButtons" unique_id=572099173]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tg2s5")
+text = "continuar"
+
+[node name="Sprite2D" type="Sprite2D" parent="MainButtons/PlayButton" unique_id=235396587]
+position = Vector2(100.64179, 11.299871)
+scale = Vector2(3.4420662, 2.2104292)
+texture = ExtResource("2_7vrkn")
+vframes = 13
+region_enabled = true
+region_rect = Rect2(5, 273, 78, 194)
+
+[node name="OptionsButton" type="Button" parent="MainButtons" unique_id=933783719]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7vrkn")
+text = "opções"
+
+[node name="Sprite2D" type="Sprite2D" parent="MainButtons/OptionsButton" unique_id=178449164]
+position = Vector2(96.157745, 7.796113)
+scale = Vector2(3.458384, 2.356799)
+texture = ExtResource("2_7vrkn")
+vframes = 12
+region_enabled = true
+region_rect = Rect2(5, 303.62094, 74.247154, 163.37906)
+
+[node name="QuitButton" type="Button" parent="MainButtons" unique_id=683025617]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jix8l")
+text = "sair"
+
+[node name="Sprite2D" type="Sprite2D" parent="MainButtons" unique_id=1443563815]
+position = Vector2(96.65596, 70.13712)
+scale = Vector2(3.4928372, 2.2665563)
+texture = ExtResource("2_7vrkn")
+vframes = 11
+region_enabled = true
+region_rect = Rect2(5, 400.6021, 74.247154, 140.5951)
+
+[node name="Panel" type="Panel" parent="." unique_id=2097284117]
+layout_mode = 0
+offset_left = 266.0
+offset_top = 142.0
+offset_right = 306.0
+offset_bottom = 182.0
+scale = Vector2(16.073502, 10.928598)
+
+[node name="Label" type="Label" parent="Panel" unique_id=694659779]
+layout_mode = 0
+offset_left = 14.744764
+offset_top = 0.09150308
+offset_right = 69.74477
+offset_bottom = 23.091503
+scale = Vector2(0.17956103, 0.2275604)
+text = "opções"
+
+[node name="HSlider" type="HSlider" parent="Panel" unique_id=793670516]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.393383
+offset_top = -8.013103
+offset_right = 2.7942352
+offset_bottom = 7.9868965
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.19473474, 0.2510239)
+theme_override_styles/slider = SubResource("StyleBoxLine_13qdw")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_8qtwp")
+max_value = 1.5
+step = 0.001
+value = 0.5
+
+[node name="Buttons" type="Sprite2D" parent="Panel" unique_id=1973165227]
+position = Vector2(1.6175686, 14.091469)
+scale = Vector2(0.22021492, 0.28896433)
+texture = ExtResource("4_nlkkf")
+hframes = 3
+vframes = 9
+region_enabled = true
+region_rect = Rect2(269.23254, 448.69162, 51.53647, 152.12576)
+
+[node name="BackButton" type="Button" parent="Panel" unique_id=1256438561]
+layout_mode = 0
+offset_left = 10.451986
+offset_top = 31.568552
+offset_right = 56.45199
+offset_bottom = 54.56855
+scale = Vector2(0.47163877, 0.19441226)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jix8l")
+text = "back"
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/BackButton" unique_id=888181493]
+position = Vector2(22.556728, 9.883972)
+scale = Vector2(0.9238664, 2.6168077)
+texture = ExtResource("2_7vrkn")
+vframes = 11
+region_enabled = true
+region_rect = Rect2(5, 400.6021, 74.247154, 140.5951)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=615628074]
+stream = ExtResource("4_glbon")
+autoplay = true
+
+[connection signal="pressed" from="MainButtons/PlayButton" to="." method="_on_playbutton_pressed"]
+[connection signal="pressed" from="MainButtons/OptionsButton" to="." method="_on_optionsbutton_pressed"]
+[connection signal="pressed" from="MainButtons/QuitButton" to="." method="_on_quitbutton_pressed"]
+[connection signal="changed" from="Panel/HSlider" to="." method="_on_h_slider_changed"]
+[connection signal="pressed" from="Panel/BackButton" to="." method="_on_back_button_pressed"]
