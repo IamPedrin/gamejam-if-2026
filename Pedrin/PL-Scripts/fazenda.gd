@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var player = $PlayerTd/Player
+@onready var player = $PlayerTd
 @onready var tela_escura = $CanvasLayer/ColorRect 
 
 func _ready() -> void:

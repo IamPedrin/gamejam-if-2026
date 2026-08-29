@@ -1627,6 +1627,7 @@ position = Vector2(-40, 10)
 position = Vector2(4, 10)
 
 [node name="PlayerTd" parent="." unique_id=958454402 instance=ExtResource("4_a6tru")]
+z_index = 5
 position = Vector2(-182, 11)
 
 [node name="UiRelogio" parent="." unique_id=647822281 instance=ExtResource("8_fib35")]
