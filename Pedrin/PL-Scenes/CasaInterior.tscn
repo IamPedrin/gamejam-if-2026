@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bab1lr6e7w8x" path="res://Nicolas/sample-2.png" id="5_ah356"]
 [ext_resource type="PackedScene" uid="uid://5cxhsrj8ia5h" path="res://Pedrin/PL-Scenes/UI_Relogio.tscn" id="5_y5qpv"]
 [ext_resource type="Texture2D" uid="uid://cy8gv27n2m51d" path="res://Nicolas/4 Walls, Floor & Doors.png" id="5_yfc3t"]
-[ext_resource type="Script" uid="uid://b5nxgkk7plcfe" path="res://Pedrin/PL-Scenes/interacao_cama.gd" id="6_r5hej"]
+[ext_resource type="Script" uid="uid://b5nxgkk7plcfe" path="res://Pedrin/PL-Scripts/interacao_cama.gd" id="6_r5hej"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iysvh"]
 texture = ExtResource("2_cht8j")
@@ -439,7 +439,6 @@ texture = ExtResource("5_yfc3t")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_juve7"]
 texture = ExtResource("4_7dyeu")
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -725,6 +724,7 @@ sources/2 = SubResource("TileSetAtlasSource_pkwrr")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cht8j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d2kgv"]
+size = Vector2(14, 20)
 
 [node name="CasaInterior" type="Node2D" unique_id=2143904350]
 script = ExtResource("1_qgsf3")
@@ -764,6 +764,7 @@ position = Vector2(-19, -48)
 script = ExtResource("6_r5hej")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteracaoCama" unique_id=1052201369]
+position = Vector2(-5, 4)
 shape = SubResource("RectangleShape2D_d2kgv")
 debug_color = Color(0.8058112, 0.36258185, 0.53990287, 0.41960785)
 

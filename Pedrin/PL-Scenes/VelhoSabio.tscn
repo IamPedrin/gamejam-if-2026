@@ -1,25 +1,133 @@
 [gd_scene format=3 uid="uid://cucxwatfq7r6h"]
 
+[ext_resource type="Texture2D" uid="uid://bpo2enq114y5m" path="res://Pedrin/PL-Sprites/IDLE.png" id="1_2iijp"]
 [ext_resource type="Script" uid="uid://cpqp3k4mjh0ni" path="res://Pedrin/PL-Scripts/velhosabio.gd" id="1_anc55"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qo41"]
+atlas = ExtResource("1_2iijp")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ciyi"]
+atlas = ExtResource("1_2iijp")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ctp5b"]
+atlas = ExtResource("1_2iijp")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hucfk"]
+atlas = ExtResource("1_2iijp")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6l5m"]
+atlas = ExtResource("1_2iijp")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cupj"]
+atlas = ExtResource("1_2iijp")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wovqk"]
+atlas = ExtResource("1_2iijp")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7ito"]
+atlas = ExtResource("1_2iijp")
+region = Rect2(672, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t02wm"]
+atlas = ExtResource("1_2iijp")
+region = Rect2(768, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oem28"]
+atlas = ExtResource("1_2iijp")
+region = Rect2(864, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_anc55"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qo41")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ciyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ctp5b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hucfk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w6l5m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cupj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wovqk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7ito")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t02wm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oem28")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 7.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5k018"]
-size = Vector2(4, 1)
+size = Vector2(5, 1.5)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5k018"]
-radius = 4.0
+radius = 5.0
 height = 16.0
 
 [node name="VelhoSabio" type="StaticBody2D" unique_id=1067142179]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1700544252]
+position = Vector2(0, -16)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_anc55")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.46951076
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1740874850]
-position = Vector2(0, -0.5)
+position = Vector2(0.5, -0.25)
 shape = SubResource("RectangleShape2D_5k018")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=513702938]
 script = ExtResource("1_anc55")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1721244553]
-position = Vector2(0, -6)
+position = Vector2(0, -7)
 shape = SubResource("CapsuleShape2D_5k018")
+
+[node name="CamadaDialogo" type="CanvasLayer" parent="." unique_id=382774218]
+
+[node name="ColorRect" type="ColorRect" parent="CamadaDialogo" unique_id=1785037464]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -132.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.33333334, 0.18431373, 0.023529412, 0.41568628)
+
+[node name="Label" type="Label" parent="CamadaDialogo/ColorRect" unique_id=1816721369]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 0
+offset_left = 155.0
+offset_top = 20.0
+offset_right = 1019.0
+offset_bottom = 94.0
+text = "Lorem Ipsum Lorem IPSUMLorem IPSUMLorem IPSUMLorem IPSUMLorem IPSUMLorem IPSUMLorem IPSUMLorem IPSUMLorem IPSUMLorem IPSUMLorem IPSUMLorem IPSUMLorem IPSUMLorem IPSUM"
+horizontal_alignment = 1
+autowrap_mode = 2
