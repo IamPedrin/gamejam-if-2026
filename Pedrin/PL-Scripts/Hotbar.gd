@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 var itens_hotbar: Array[String] = [
-	"Enxada", "Regador", "Semente 1", "Semente 2", "", "", "", "", ""
+	"Enxada", "Regador", "Semente_1", "Semente_2", "Fertilizante", "", "", "", ""
 ]
 
 var slot_selecionado: int = 0 
