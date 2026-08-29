@@ -1,63 +1,31 @@
 extends Control
 
-@export_file("*.tscn") var cena_do_jogo: String
+@onready var painel_creditos = $PainelCreditos
 
 func _ready() -> void:
-	var main_buttons = get_node_or_null("MainButtons")
-	var options = get_node_or_null("Panel")
-	var slider = get_node_or_null("Panel/HSlider")
+	# Garante de forma extra que os créditos não apareçam ao iniciar o jogo
+	if painel_creditos:
+		painel_creditos.visible = false
 
-	print("MainButtons encontrado: ", main_buttons != null)
-	print("Panel encontrado: ", options != null)
-	print("HSlider encontrado: ", slider != null)
+# --- Funções dos Botões Principais ---
 
-	if main_buttons:
-		main_buttons.visible = true
+func _on_iniciar_pressed() -> void:
+	# Reinicia o estado do tempo e inventário para um novo jogo limpo
+	SistemaTempo.dia_atual = 1
+	SistemaTempo.tempo_passado = 0
+	SistemaTempo.relogio_rodando = true
+	Global.estado_dos_canteiros.clear()
+	
+	# Carrega a cena do jogo (confirme se o caminho está exato)
+	get_tree().change_scene_to_file("res://Pedrin/PL-Scenes/Fazenda.tscn")
 
-	if options:
-		options.visible = false
+func _on_creditos_pressed() -> void:
+	painel_creditos.visible = true
 
-	if slider:
-		slider.mouse_filter = Control.MOUSE_FILTER_STOP
-
-	print("MainButtons encontrado: ", main_buttons != null)
-	print("Panel encontrado: ", options != null)
-
-	if main_buttons:
-		main_buttons.visible = true
-
-	if options:
-		options.visible = false
-
-
-func _on_playbutton_pressed() -> void:
-	if cena_do_jogo != "":
-		get_tree().change_scene_to_file(cena_do_jogo)
-	else:
-		print("Aviso: Selecione a cena do jogo no Inspetor!")
-
-
-func _on_optionsbutton_pressed() -> void:
-	var main_buttons = get_node_or_null("MainButtons")
-	var options = get_node_or_null("Panel")
-
-	if main_buttons:
-		main_buttons.visible = false
-
-	if options:
-		options.visible = true
-
-
-func _on_quitbutton_pressed() -> void:
+func _on_sair_pressed() -> void:
 	get_tree().quit()
 
+# --- Função do Botão de Fechar os Créditos ---
 
-func _on_back_button_pressed() -> void:
-	var main_buttons = get_node_or_null("MainButtons")
-	var options = get_node_or_null("Panel")
-
-	if main_buttons:
-		main_buttons.visible = true
-
-	if options:
-		options.visible = false
+func _on_botao_fechar_pressed() -> void:
+	painel_creditos.visible = false
