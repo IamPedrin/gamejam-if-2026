@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://dyriikf6bdl24"]
 
 [ext_resource type="Script" uid="uid://b0xi54k8ysemk" path="res://Pedrin/PL-Scripts/tela_vitoria.gd" id="1_kb7q1"]
+[ext_resource type="Texture2D" uid="uid://daeswuvpj75bf" path="res://butaoBase.tres" id="2_4gm3j"]
+[ext_resource type="FontFile" uid="uid://dr1mwi8tlvk52" path="res://Minecraft.ttf" id="2_l4x4r"]
+[ext_resource type="Script" uid="uid://byc6sjaaisrm0" path="res://Nicolas/scripts/try_again.gd" id="3_tdtds"]
 
 [node name="TelaVitoria" type="CanvasLayer" unique_id=964329764]
 script = ExtResource("1_kb7q1")
@@ -12,6 +15,43 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="try-again" type="TextureButton" parent="ColorRect" unique_id=263983811]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = 155.0
+offset_right = 231.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("2_4gm3j")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("3_tdtds")
+
+[node name="Label" type="Label" parent="ColorRect/try-again" unique_id=283295957]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.5
+offset_top = -8.5
+offset_right = 96.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_l4x4r")
+theme_override_font_sizes/font_size = 18
+text = "MENU PRINCIPAL"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Vitoria" type="Label" parent="." unique_id=1363209914]
 anchors_preset = 8
@@ -25,6 +65,7 @@ offset_right = 241.0
 offset_bottom = 16.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_l4x4r")
 theme_override_font_sizes/font_size = 24
 text = "As estações estão ao seu favor. Parabéns!"
 
@@ -40,20 +81,8 @@ offset_right = 241.0
 offset_bottom = 89.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_l4x4r")
 theme_override_font_sizes/font_size = 19
 horizontal_alignment = 1
 
-[node name="BotaoRecomecar" type="Button" parent="." unique_id=1593101080]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -64.5
-offset_top = -31.0
-offset_right = 64.5
-grow_horizontal = 2
-grow_vertical = 0
-text = "Menu Principal "
-
-[connection signal="pressed" from="BotaoRecomecar" to="." method="_on_botao_recomecar_pressed"]
+[connection signal="pressed" from="ColorRect/try-again" to="." method="_on_tryagain_pressed"]

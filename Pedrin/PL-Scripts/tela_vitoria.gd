@@ -16,8 +16,8 @@ func _ready() -> void:
 	else:
 		estatisticas.text = "Parabéns!\nVocê sobreviveu 1 ano e salvou " + str(plantas_vivas) + " plantas."
 
-func _on_botao_recomecar_pressed() -> void:
-	# Reseta absolutamente tudo para o jogo recomeçar limpo
+func _on_tryagain_pressed() -> void:
+		# Reseta absolutamente tudo para o jogo recomeçar limpo
 	SistemaTempo.dia_atual = 1
 	SistemaTempo.tempo_passado = 0
 	SistemaTempo.relogio_rodando = true
@@ -25,4 +25,4 @@ func _on_botao_recomecar_pressed() -> void:
 	Global.estado_dos_canteiros.clear()
 	Global.entrada_alvo = ""
 	
-	get_tree().change_scene_to_file("res://Pedrin/PL-Scenes/Fazenda.tscn")
+	get_tree().change_scene_to_file("res://main_menu.tscn")
