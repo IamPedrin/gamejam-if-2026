@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://dumptxtaxdtv0"]
 
 [ext_resource type="Script" uid="uid://ctc4dv7rb14dj" path="res://Pedrin/PL-Scripts/tela_game_over.gd" id="1_8xgah"]
+[ext_resource type="FontFile" uid="uid://dr1mwi8tlvk52" path="res://Minecraft.ttf" id="2_sajk4"]
+[ext_resource type="Texture2D" uid="uid://daeswuvpj75bf" path="res://butaoBase.tres" id="3_kpmg7"]
 
 [node name="TelaGameOver" type="CanvasLayer" unique_id=1849575248]
 script = ExtResource("1_8xgah")
@@ -25,21 +27,41 @@ offset_right = 167.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_sajk4")
 theme_override_font_sizes/font_size = 24
 text = "Suas plantas não sobreviveram as estações"
 
-[node name="Button" type="Button" parent="." unique_id=2122313957]
-anchors_preset = 7
+[node name="try-again" type="TextureButton" parent="." unique_id=1208198761]
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -2.0
-offset_top = -88.0
-offset_right = 6.0
-offset_bottom = -80.0
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = 111.0
+offset_right = 237.0
+offset_bottom = 196.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
+texture_normal = ExtResource("3_kpmg7")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="try-again" unique_id=713002186]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.5
+offset_top = -8.5
+offset_right = 96.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_sajk4")
+theme_override_font_sizes/font_size = 18
 text = "TENTAR NOVAMENTE"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="try-again" to="." method="_on_tryagain_pressed"]

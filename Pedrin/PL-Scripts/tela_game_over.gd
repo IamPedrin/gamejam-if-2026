@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-func _on_button_pressed() -> void:
+func _on_tryagain_pressed() -> void:
 	SistemaTempo.dia_atual = 1
 	SistemaTempo.tempo_passado = 0
 	SistemaTempo.relogio_rodando = true

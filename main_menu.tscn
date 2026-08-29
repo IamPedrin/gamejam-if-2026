@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://cgjnggxb4q38o" path="res://kauaUI/o5_rK3.png" id="2_fu7sn"]
 [ext_resource type="Texture2D" uid="uid://daeswuvpj75bf" path="res://butaoBase.tres" id="3_glbon"]
 [ext_resource type="FontFile" uid="uid://dr1mwi8tlvk52" path="res://Minecraft.ttf" id="5_glbon"]
+[ext_resource type="Script" uid="uid://crfnic137mksi" path="res://Nicolas/scripts/label.gd" id="5_nlkkf"]
+[ext_resource type="AudioStream" uid="uid://cu6aslk2asjf8" path="res://kauaUI/Morning in the Storybook Village.mp3" id="6_nlkkf"]
 
 [node name="main menu" type="Control" unique_id=1839881705]
 layout_mode = 3
@@ -122,11 +124,12 @@ theme_override_font_sizes/font_size = 36
 text = "SAIR"
 
 [node name="PainelCreditos" type="Panel" parent="." unique_id=1811562677]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -19.0
+offset_bottom = -19.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -135,10 +138,10 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 72.0
-offset_top = -172.0
-offset_right = 475.0
-offset_bottom = 171.0
+offset_left = 31.0
+offset_top = -261.0
+offset_right = 1350.0
+offset_bottom = 552.0
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("5_glbon")
 theme_override_font_sizes/font_size = 44
@@ -148,7 +151,96 @@ Marcos Barbosa
 Nicolas
 Pedro
 Pedro Luiz
-"
+
+Interface / UI
+
+UI User Interface Pack - Retro
+Por: ToffeeCraft
+Usado em: Inventário
+Página do asset
+
+UI: 02 Wood Theme
+Por: Admurin
+Usado em: Interface / UI
+Página do asset
+
+Ícones e Inventário
+
+Farm RPG
+Por: MaeveDevs
+Usado em: Ícones e inventário
+Página do asset
+
+Personagens
+
+Farmer Base
+Por: Seliel the Shaper
+Usado em: Personagens
+Página do asset
+
+Frutas e Vegetais
+
+Fruits & Veggies
+Por: STMASSI
+Usado em: Frutas e vegetais
+Página do asset
+
+MÚSICAS
+
+Lo-Fi and Chill
+Por: HoliznaCC0
+Fonte: Free Music Archive
+Álbum / músicas
+
+Pretty Little Lies — HoliznaCC0
+Red Hair, Blue Sky — HoliznaCC0
+
+Shooter On The Roof
+Por: John Bartmann
+Fonte: Free Music Archive
+Página da música
+
+Hélice
+Paddle Boat
+
+EFEITOS SONOROS / AMBIENTES
+
+Walking in Grass
+Fonte: Freesound
+Usado em: Passos na grama
+Busca no Freesound
+
+Walking in the Castle
+Por: Alanis
+Usado em: Passos / ambiente
+Fonte: Freesound
+
+BaconFryingInPan.flac
+Fonte: Freesound
+Usado em: Chuva
+Busca no Freesound
+
+Water / River
+Fonte: Freesound
+Usado em: Rio / água
+Busca no Freesound
+
+Montana Crickets at Sunset in Late August
+Fonte: Freesound
+Usado em: Ambiente noturno / grilos
+Busca no Freesound
+
+AMBForst_Ambience, noon, forest, trail, Piratininga...
+Fonte: Freesound
+Usado em: Ambiente diurno / floresta
+Busca no Freesound
+
+Agradecimentos
+
+Agradecemos aos artistas, músicos e criadores que disponibilizaram seus trabalhos e tornaram possível a criação deste jogo.
+
+Todos os créditos pertencem aos respectivos criadores dos assets utilizados."
+script = ExtResource("5_nlkkf")
 
 [node name="FecharPainel" type="TextureButton" parent="PainelCreditos" unique_id=1853990235]
 layout_mode = 1
@@ -158,9 +250,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 352.0
-offset_top = -316.0
+offset_top = -261.0
 offset_right = 544.0
-offset_bottom = -242.0
+offset_bottom = -187.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("3_glbon")
@@ -174,15 +266,18 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -32.0
-offset_top = -11.5
-offset_right = 32.0
-offset_bottom = 11.5
+offset_left = -72.0
+offset_top = -18.0
+offset_right = 79.0
+offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("5_glbon")
 theme_override_font_sizes/font_size = 36
 text = "FECHAR"
+
+[node name="sound" type="AudioStreamPlayer2D" parent="." unique_id=250531864]
+stream = ExtResource("6_nlkkf")
 
 [connection signal="pressed" from="Iniciar" to="." method="_on_iniciar_pressed"]
 [connection signal="pressed" from="Creditos" to="." method="_on_creditos_pressed"]
